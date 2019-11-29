@@ -1,3 +1,5 @@
+/* Note: This source code is now modified from original(#1.4.5) to supress an error in s.d.wrap.focus() call  */
+
 /*
  * SimpleModal @VERSION - jQuery Plugin
  * http://simplemodal.com/
