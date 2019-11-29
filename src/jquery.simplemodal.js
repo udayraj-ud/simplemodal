@@ -1,3 +1,5 @@
+/* Note: This source code is now modified from original. The changes are mentioned in jira/ORC-2493 branch */
+
 /*
  * SimpleModal @VERSION - jQuery Plugin
  * http://simplemodal.com/
