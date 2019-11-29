@@ -1,3 +1,39 @@
+# Why this fork?
+
+TLDR; To solve the issue mentioned here https://stackoverflow.com/questions/23251036/uncaught-typeerror-cannot-read-property-focus-of-undefined
+
+There's an annoying console error coming due to this snippet of code.
+
+```
+// focus on dialog or the first visible/enabled input element
+       var input = $(':input:enabled:visible:' + p, s.d.wrap);
+       setTimeout(function () {
+           input.length > 0 ? input.focus() : s.d.wrap.focus();
+    }, 10);
+```
+
+And as per the requirement focusing on the dialogue is not a must-have. So this fork has changed it to the following -
+```
+
+// focus on dialog or the first visible/enabled input element
+	var input = $(':input:enabled:visible:' + p, s.d.wrap);
+	setTimeout(function () {
+		input.length > 0 ? input.focus() : (s.d.wrap ? s.d.wrap.focus() : null);
+	}, 10);
+
+```
+
+
+## How to use?
+Update bower.json with following line -
+```
+"jquery.simplemodal": "udayraj-ud/simplemodal#1.4.5.1",
+```
+Run bower install.
+
+
+< Continuing with existing readme below >
+
 > **NOTICE**
  
 > I am no longer able to actively support or maintain SimpleModal. If you would like to become a contributor, drop me a line. Otherwise, I will be removing this project in the near future.
